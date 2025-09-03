@@ -19,9 +19,17 @@ function gif(){
     figura.style.backgroundImage = "url(../img/programacion.gif)"
 }
 
+function animacion(){
+
+    figura.style.transition = "all 1s ease-in-out"
+    figura.style.transform = "rotate(360deg) scale(1.0)"
+    
+}
+
 
 document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnCircle').addEventListener('click',circulo)
     document.getElementById('btnStar').addEventListener('click',estrella)
     document.getElementById('btnGif').addEventListener('click', gif)
+    document.getElementById('btnAnim').addEventListener('click', animacion)
 });
