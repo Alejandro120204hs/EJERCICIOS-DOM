@@ -31,6 +31,11 @@ function arriba(){
     figura.style.transform = "translateY(-100px)";
 }
 
+function abajo(){
+
+    figura.style.transition = "all 1s ease-in-out";
+    figura.style.transform = "translateY(100px)";
+}
 
 
 document.addEventListener('DOMContentLoaded', function(){
