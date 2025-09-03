@@ -14,9 +14,14 @@ function estrella(){
                             2% 35%, 39% 35%)"
 }
 
+function gif(){
+
+    figura.style.backgroundImage = "url(../img/programacion.gif)"
+}
 
 
 document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnCircle').addEventListener('click',circulo)
     document.getElementById('btnStar').addEventListener('click',estrella)
+    document.getElementById('btnGif').addEventListener('click', gif)
 });
