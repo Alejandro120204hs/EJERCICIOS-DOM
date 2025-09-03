@@ -89,6 +89,27 @@ function hColor(){
     figura.style.backgroundColor = color
 }
 
+function cFigura(){
+
+    const f = prompt("Eliga entre circulo, estrella, cuadrado")
+
+    switch (f) {
+        case 'circulo':
+            figura.style.borderRadius = '50%';
+        break;
+    
+        case 'estrella':
+            figura.style.clipPath = "polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, \
+                                    79% 91%, 50% 70%, 21% 91%, 32% 57%, \
+                                    2% 35%, 39% 35%)";
+        break;
+
+        case 'cuadrado':
+            figura.style.borderRadius = '10px'
+        break;
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnCircle').addEventListener('click',circulo)
     document.getElementById('btnStar').addEventListener('click',estrella)
@@ -103,4 +124,5 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnAddParagraph').addEventListener('click', aParrafo)
     document.getElementById('btnRemoveParagraph').addEventListener('click', eParrafo)
     document.getElementById('btnHexColor').addEventListener('click', hColor)
+    document.getElementById('btnChooseFigure').addEventListener('click', cFigura)
 });
