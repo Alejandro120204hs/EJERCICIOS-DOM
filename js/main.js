@@ -70,9 +70,16 @@ function aParrafo(){
     const nParrafo = prompt("Ingrese el nuevo parrafo");
     const parrafo = document.createElement('p');
     const ubicacion = document.querySelector('#extraParagraphs')
-    
+
     parrafo.textContent = nParrafo;
     ubicacion.appendChild(parrafo);
+}
+
+function eParrafo(){
+
+    const parrafo = document.querySelector('#extraParagraphs');
+    parrafo.remove();
+
 }
 
 document.addEventListener('DOMContentLoaded', function(){
@@ -87,4 +94,5 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnChangeTitle').addEventListener('click', nTitulo)
     document.getElementById('btnChangeParagraph').addEventListener('click', nParrafo)
     document.getElementById('btnAddParagraph').addEventListener('click', aParrafo)
+    document.getElementById('btnRemoveParagraph').addEventListener('click', eParrafo)
 });
