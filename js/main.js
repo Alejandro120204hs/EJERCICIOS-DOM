@@ -2,7 +2,6 @@ const figura = document.getElementById('figure');
 
 function circulo(){
     
-
     figura.style.borderRadius = "50%";
     
 }
@@ -26,10 +25,19 @@ function animacion(){
     
 }
 
+function arriba(){
+
+    figura.style.transition = "all 1s ease-in-out";
+    figura.style.transform = "translateY(-100px)";
+}
+
+
 
 document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnCircle').addEventListener('click',circulo)
     document.getElementById('btnStar').addEventListener('click',estrella)
     document.getElementById('btnGif').addEventListener('click', gif)
     document.getElementById('btnAnim').addEventListener('click', animacion)
+    document.getElementById('btnMoveUp').addEventListener('click', arriba)
+    document.getElementById('btnMoveDown').addEventListener('click', abajo)
 });
