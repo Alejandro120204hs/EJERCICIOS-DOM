@@ -10,18 +10,18 @@ function estrella(){
 
     figura.style.clipPath = "polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, \
                             79% 91%, 50% 70%, 21% 91%, 32% 57%, \
-                            2% 35%, 39% 35%)"
+                            2% 35%, 39% 35%)";
 }
 
 function gif(){
 
-    figura.style.backgroundImage = "url(../img/programacion.gif)"
+    figura.style.backgroundImage = "url(../img/programacion.gif)";
 }
 
 function animacion(){
 
-    figura.style.transition = "all 1s ease-in-out"
-    figura.style.transform = "rotate(360deg) scale(1.0)"
+    figura.style.transition = "all 1s ease-in-out";
+    figura.style.transform = "rotate(360deg) scale(1.0)";
     
 }
 
@@ -43,6 +43,12 @@ function izquierda(){
     figura.style.transform = "translateX(-100px)";
 }
 
+function derecha(){
+
+    figura.style.transition = "all 1s ease-in-out";
+    figura.style.transform = "translateX(100px)";
+}
+
 
 document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnCircle').addEventListener('click',circulo)
@@ -52,4 +58,5 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnMoveUp').addEventListener('click', arriba)
     document.getElementById('btnMoveDown').addEventListener('click', abajo)
     document.getElementById('btnMoveLeft').addEventListener('click', izquierda)
+    document.getElementById('btnMoveRight').addEventListener('click', derecha)
 });
