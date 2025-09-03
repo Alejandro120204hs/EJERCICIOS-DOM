@@ -82,6 +82,13 @@ function eParrafo(){
 
 }
 
+function hColor(){
+
+    const color = prompt("Ingrese un color en HEX");
+
+    figura.style.backgroundColor = color
+}
+
 document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnCircle').addEventListener('click',circulo)
     document.getElementById('btnStar').addEventListener('click',estrella)
@@ -95,4 +102,5 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnChangeParagraph').addEventListener('click', nParrafo)
     document.getElementById('btnAddParagraph').addEventListener('click', aParrafo)
     document.getElementById('btnRemoveParagraph').addEventListener('click', eParrafo)
+    document.getElementById('btnHexColor').addEventListener('click', hColor)
 });
