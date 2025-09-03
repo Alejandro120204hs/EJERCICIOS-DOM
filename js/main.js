@@ -37,6 +37,12 @@ function abajo(){
     figura.style.transform = "translateY(100px)";
 }
 
+function izquierda(){
+
+    figura.style.transition = "all 1s ease-in-out";
+    figura.style.transform = "translateX(-100px)";
+}
+
 
 document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnCircle').addEventListener('click',circulo)
@@ -45,4 +51,5 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnAnim').addEventListener('click', animacion)
     document.getElementById('btnMoveUp').addEventListener('click', arriba)
     document.getElementById('btnMoveDown').addEventListener('click', abajo)
+    document.getElementById('btnMoveLeft').addEventListener('click', izquierda)
 });
