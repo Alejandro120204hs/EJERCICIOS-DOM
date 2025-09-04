@@ -164,6 +164,9 @@ function tImagen(){
 
 function nEnlace(){
 
+    const e = document.querySelector('#mainLink')
+    const enlace = prompt('Ingrese un enlace');
+    e.setAttribute('href', enlace)
 }
 
 document.addEventListener('DOMContentLoaded', function(){
