@@ -132,7 +132,26 @@ function siguiente(){
 
 function atras(){
 
+    const i = document.querySelector('#mainImage');
+    let imagenes = ['img/imagen.jpg','img/imagen2.jpg','img/imagen3.jpg']
+    let iActual = i.getAttribute('src');
+    let atras = imagenes[imagenes.length-1];
+
+    imagenes.forEach((imagen,index)=>{
+        if(iActual===imagen){
+            if(index>0){
+                atras=imagenes[index-1];
+            }else{
+                atras = imagenes[imagenes.length-1];
+            }
+        }
+    });
+    i.setAttribute('src', atras)
 }
+
+
+
+
 
 document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnCircle').addEventListener('click',circulo)
@@ -151,4 +170,5 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnChooseFigure').addEventListener('click', cFigura)
     document.getElementById('btnChangeImageNext').addEventListener('click', siguiente)
     document.getElementById('btnChangeImagePrev').addEventListener('click', atras)
+    document.getElementById('btnToggleImage').addEventListener('click', ocultar)
 });
