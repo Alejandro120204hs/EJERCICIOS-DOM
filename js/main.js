@@ -175,6 +175,12 @@ function nPestaña(){
     enlace.setAttribute('target', '_blank')
 }
 
+function dEnlace(){
+
+    const enlace = document.querySelector('#mainLink')
+    enlace.removeAttribute('href')
+}
+
 document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnCircle').addEventListener('click',circulo)
     document.getElementById('btnStar').addEventListener('click',estrella)
@@ -196,4 +202,5 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnChangeAlt').addEventListener('click', tImagen)
     document.getElementById('btnChangeLink').addEventListener('click', nEnlace)
     document.getElementById('btnOpenLink').addEventListener('click', nPestaña)
+    document.getElementById('btnDisableLink').addEventListener('click', dEnlace)
 });
