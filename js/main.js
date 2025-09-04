@@ -15,7 +15,7 @@ function estrella(){
 
 function gif(){
 
-    figura.style.backgroundImage = "url(../img/programacion.gif)";
+    figura.style.backgroundImage = "url(img/programacion.gif)";
 }
 
 function animacion(){
