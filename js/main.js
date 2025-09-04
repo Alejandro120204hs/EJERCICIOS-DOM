@@ -152,7 +152,7 @@ function atras(){
 function ocultar(){
 
     const imagen = document.querySelector("#mainImage");
-    imagen.style.display = 'none'
+    imagen.classList.toggle('ocultar')
 }
 
 function tImagen(){
@@ -162,7 +162,9 @@ function tImagen(){
     imagen.setAttribute('alt', texto);
 }
 
+function nEnlace(){
 
+}
 
 document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnCircle').addEventListener('click',circulo)
@@ -183,4 +185,5 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnChangeImagePrev').addEventListener('click', atras)
     document.getElementById('btnToggleImage').addEventListener('click', ocultar)
     document.getElementById('btnChangeAlt').addEventListener('click', tImagen)
+    document.getElementById('btnChangeLink').addEventListener('click', nEnlace)
 });
