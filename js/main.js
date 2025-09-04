@@ -20,8 +20,7 @@ function gif(){
 
 function animacion(){
 
-    figura.style.transition = "all 1s ease-in-out";
-    figura.style.transform = "rotate(360deg) scale(1.0)";
+    figura.classList.add('animado');
     
 }
 
@@ -110,6 +109,19 @@ function cFigura(){
     }
 }
 
+function siguiente(){
+
+    const i = document.querySelector('#mainImage');
+
+    let imagenes = ['../img/imagen.jpg','../img/imagen2.jpg','../img/imagen3.jpg']
+
+    imagenes.forEach((imagen,index) =>{
+
+        i.setAttribute('src', imagen);
+    })
+
+}
+
 document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnCircle').addEventListener('click',circulo)
     document.getElementById('btnStar').addEventListener('click',estrella)
@@ -125,4 +137,5 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnRemoveParagraph').addEventListener('click', eParrafo)
     document.getElementById('btnHexColor').addEventListener('click', hColor)
     document.getElementById('btnChooseFigure').addEventListener('click', cFigura)
+    document.getElementById('btnChangeImageNext').addEventListener('click', siguiente)
 });

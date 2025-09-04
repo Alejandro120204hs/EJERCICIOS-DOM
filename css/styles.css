@@ -115,3 +115,20 @@ img{
     margin-top: 20px;
     display: block;
 }
+
+#figure.animado {
+  animation: animacion 2s infinite;
+
+}
+
+@keyframes animacion {
+  0% {
+    transform: rotate(0deg) translateX(-100px) ;
+
+    
+  }
+  100% {
+    transform: rotate(360deg) translateY(100px);
+
+  }
+}
