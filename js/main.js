@@ -155,6 +155,13 @@ function ocultar(){
     imagen.style.display = 'none'
 }
 
+function tImagen(){
+
+    const imagen = document.querySelector('#mainImage');
+    const texto = prompt('Ingrese un texto');
+    imagen.setAttribute('alt', texto);
+}
+
 
 
 document.addEventListener('DOMContentLoaded', function(){
@@ -175,4 +182,5 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnChangeImageNext').addEventListener('click', siguiente)
     document.getElementById('btnChangeImagePrev').addEventListener('click', atras)
     document.getElementById('btnToggleImage').addEventListener('click', ocultar)
+    document.getElementById('btnChangeAlt').addEventListener('click', tImagen)
 });
