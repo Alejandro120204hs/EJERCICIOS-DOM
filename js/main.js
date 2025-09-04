@@ -149,7 +149,11 @@ function atras(){
     i.setAttribute('src', atras)
 }
 
+function ocultar(){
 
+    const imagen = document.querySelector("#mainImage");
+    imagen.style.display = 'none'
+}
 
 
 
